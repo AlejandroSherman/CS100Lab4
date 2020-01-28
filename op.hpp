@@ -7,7 +7,7 @@ class Op : public Base {
     public:
         Op(double value) : Base() { }
         virtual double evaluate() { return 0.0; }
-        virtual std::string stringify() { return ""; }
+        virtual std::string stringify() { return "0.0"; }
 };
 
 #endif //__OP_HPP__
