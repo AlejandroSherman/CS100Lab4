@@ -7,7 +7,7 @@ using namespace std;
 
 class Sub : public Op{
 	public:
-		Sub( Base* left, Base* right) : Base()
+		Sub( double left, double right) : Op()
 		{
 			lstring = to_string(left);
 			rstring = to_string(right);
