@@ -10,11 +10,11 @@ class Mult : public Base {
    Mult( Base* left, Base* right) : Base() {
    lnum = left->evaluate();
    rnum = right->evaluate();
-   lhs = std::to_string(rnum);
-   rhs = std::to_string(lnum);
+   lhs = left->stringify();
+   rhs = right->stringify();
 }
       virtual double evaluate () {return (lnum * rnum) ;}
-      virtual std::string stringify() {return lhs + "*" + rhs;}
+      virtual std::string stringify() {return lhs + " * " + rhs;}
   private:
     std::string lhs;
     std::string rhs;

@@ -4,15 +4,21 @@
 #include "base.hpp"
 #include <string>
 #include <iostream>
+#include <stdlib.h>
 
 class Rand : public Base {
       public: 
-      Rand(double value) : Base () {}
-      virtual double evaluate() { return num }
-      virtual std::string stringify() {return s_num}
+      Rand() : Base () {
+      num = rand() % 100;
+      s_num = std::to_string(num);
+      s_num.erase(s_num.find_last_not_of('0') + 1, std::string::npos);
+      s_num.erase(s_num.find_last_not_of('.') + 1, std::string::npos);
+      }
+      virtual double evaluate() { return num; }
+      virtual std::string stringify() {return s_num;}
       private:
-      double num = rand() % 100;
-      string s_num = std::to_string(num);
+      double num;
+      std::string s_num;
 };
 
 #endif 

@@ -1,7 +1,9 @@
 #include "gtest/gtest.h"
 
 #include "op_test.hpp"
-#include "mult_test.cpp"
+#include "add_test.hpp"
+#include "mult_test.hpp"
+#include "rand_test.hpp"
 
 //TEST(OpTest, eight){
   // Op* op1 = new Op (8); 
