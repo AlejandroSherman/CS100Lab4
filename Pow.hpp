@@ -4,15 +4,15 @@
 #include <math.h>
 #include "op.hpp"
 using namespace std; 
-class Pow : public Op
+class Pow : public Base
 {
 	public: 
-		Pow( Base* left, Base* right):Op()	
+		Pow( Base* left, Base* right):Base()	
 		{
-			lstring = to_string(left);
-			rstring = to_string(right);
-			ldouble = left;
-			rdouble = right;
+			lstring = left -> stringify();
+			rstring = right -> stringify();
+			ldouble = left -> evaluate();
+			rdouble = right -> evaluate();
 		}
 		virtual double evaluate()
 		{
