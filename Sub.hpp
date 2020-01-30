@@ -5,14 +5,14 @@
 
 using namespace std; 
 
-class Sub : public Op{
+class Sub : public Base{
 	public:
-		Sub( double left, double right) : Op()
+		Sub( Base* left, Base* right) : Base()
 		{
-			lstring = to_string(left);
-			rstring = to_string(right);
-			ldouble = left;
-			rdouble = right;
+			lstring = left->stringify();
+			rstring = right->stringify();
+			ldouble = left -> evaluate();
+			rdouble = right -> evaluate();
 		}
 		virtual double evaluate()
 		{

@@ -1,16 +1,16 @@
-#ifndef __Div_HPP__
-#define __DIV_HPP__
+#ifndef _Div_HPP_
+#define _DIV_HPP_
 
 #include "op.hpp"
 using namespace std;
-class Div : publie Op {
+class Div : public Base {
 	public:
-		Div( Base* left, Base* right) : Op()
+		Div( Base* left, Base* right) : Base()
 		{
-			lstring = to_string(left); 
-			rstring = to_stirng(right);
-			ldouble = left; 
-			rdouble = rdouble; 
+			lstring = left -> stringify();
+			rstring = right -> stringify();
+			ldouble = left -> evaluate(); 
+			rdouble = right -> evaluate(); 
 		}		
 		virtual double evaluate()
 		{
