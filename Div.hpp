@@ -1,5 +1,5 @@
-#ifndef __Div_HPP__
-#define __DIV_HPP__
+#ifndef _Div_HPP_
+#define _DIV_HPP_
 
 #include "op.hpp"
 using namespace std;
