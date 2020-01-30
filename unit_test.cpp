@@ -4,6 +4,10 @@
 #include "add_test.hpp"
 #include "mult_test.hpp"
 #include "rand_test.hpp"
+#include "sub_test.hpp"
+#include "div_test.hpp"
+#include "pow_test.hpp"
+
 
 //TEST(OpTest, eight){
   // Op* op1 = new Op (8); 

@@ -33,7 +33,7 @@ TEST(SubTest, SubEvaluate_Neg_Two_Minus_Neg_Five) {
 	Op* op1 = new Op(-2);
 	Op* op2 = new Op(-5);
 	Sub* test = new Sub(op1, op2);
-	EXPECT_EQ(test->evaluate(), -7);
+	EXPECT_EQ(test->evaluate(),3);
 }
 TEST(SubTest, SubStringify_Eight_Minus_Four) {
 	Op* op1 = new Op(8);

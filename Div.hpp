@@ -3,14 +3,14 @@
 
 #include "op.hpp"
 using namespace std;
-class Div : publie Base {
+class Div : public Base {
 	public:
 		Div( Base* left, Base* right) : Base()
 		{
 			lstring = left -> stringify();
 			rstring = right -> stringify();
 			ldouble = left -> evaluate(); 
-			rdouble = rdouble -> evaluate(); 
+			rdouble = right -> evaluate(); 
 		}		
 		virtual double evaluate()
 		{

@@ -16,7 +16,7 @@ class Pow : public Base
 		}
 		virtual double evaluate()
 		{
-			return(pow(ldouble, rdouble);
+			return(pow(ldouble, rdouble));
 		}
 		virtual string stringify()
 		{
