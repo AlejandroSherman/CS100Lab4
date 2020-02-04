@@ -33,6 +33,18 @@ TEST(OpTest, OpStringHundred){
     std::string hundred = "100";
     EXPECT_EQ(test->stringify(), hundred);
 }
+
+TEST(OpTest, OpEvaluateNegNine){
+    Op* test = new Op(-9);
+    EXPECT_EQ(test->evaluate(), -9);
+}
+
+TEST(OpTest, OPStringNegFifty){
+    Op* test = new Op(-50);
+    std::string neg_fifty = "-50";
+    EXPECT_EQ(test->stringify(), neg_fifty);
+}
+
   
 
 #endif //__OP_TEST_HPP__

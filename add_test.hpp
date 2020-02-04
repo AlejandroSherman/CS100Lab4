@@ -52,4 +52,41 @@ TEST(AddTest, AddEvaluateTwoMults){
    EXPECT_EQ(test->evaluate(), 13.32);
 }
 
+TEST(AddTest, AddEvaluateZeroAndNum){
+  Op* op1 = new Op(0.0);
+  Op* op2 = new Op(21.8);
+  Add* test = new Add(op1, op2);
+ EXPECT_EQ(test->evaluate(), 21.8);
+}
+
+TEST(AddTest, AddEvaluateTwoNegNums){
+  Op* op1 = new Op(-3.33);
+  Op* op2 = new Op(-1);
+  Add* test = new Add(op1, op2);
+ EXPECT_EQ(test->evaluate(), -4.33);
+}
+
+TEST(AddTest, AddEvaluateNegAndPosNum){
+  Op* op1 = new Op(-5.4);
+  Op* op2 = new Op(2.2);
+  Add* test = new Add(op1, op2);
+ EXPECT_EQ(test->evaluate(), -3.2);
+}
+
+TEST(AddTest, AddStringTwoNegNums){
+  Op* op1 = new Op(-12);
+  Op* op2 = new Op(-13.78);
+  Add* test = new Add(op1, op2);
+  std::string result = "-12 + -13.78";
+ EXPECT_EQ(test->stringify(), result);
+}
+
+TEST(AddTest, AddStringTwoZeroes){
+  Op* op1 = new Op(0);
+  Op* op2 = new Op(0);
+  Add* test = new Add(op1, op2);
+  std::string result = "0 + 0";
+ EXPECT_EQ(test->stringify(), result);
+}
+
 #endif

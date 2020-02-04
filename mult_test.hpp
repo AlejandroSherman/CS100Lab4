@@ -50,5 +50,41 @@ TEST(MultTest, MultEvaluateTwoAdds){
  EXPECT_EQ(test->evaluate(), 66);
 }
 
+TEST(MultTest, MultEvaluateZeroAndSeven){
+  Op* op1 = new Op(0.0);
+  Op* op2 = new Op(7);
+  Mult* test = new Mult(op1, op2);
+ EXPECT_EQ(test->evaluate(), 0);
+}
+
+TEST(MultTest, MultEvaluateTwoNegNums){
+  Op* op1 = new Op(-4);
+  Op* op2 = new Op(-4);
+  Mult* test = new Mult(op1, op2);
+ EXPECT_EQ(test->evaluate(), 16);
+}
+
+TEST(MultTest, MultEvaluateNegAndPosNum){
+  Op* op1 = new Op(-6);
+  Op* op2 = new Op(2.5);
+  Mult* test = new Mult(op1, op2);
+ EXPECT_EQ(test->evaluate(), -15);
+}
+
+TEST(MultTest, MultStringTwoNegNums){
+  Op* op1 = new Op(-10);
+  Op* op2 = new Op(-20.5);
+  Mult* test = new Mult(op1, op2);
+  std::string result = "-10 * -20.5";
+ EXPECT_EQ(test->stringify(), result);
+}
+
+TEST(MultTest, MultStringTwoZeroes){
+  Op* op1 = new Op(0);
+  Op* op2 = new Op(0);
+  Mult* test = new Mult(op1, op2);
+  std::string result = "0 * 0";
+ EXPECT_EQ(test->stringify(), result);
+}
 
 #endif
