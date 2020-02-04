@@ -38,7 +38,7 @@ TEST(MixTest, MixStringify_neg5to2_plus_4times9_divides_3_minus17) {
 
 	Op* op5 = new Op(17);
 		
-	string result = "-5**2 + 4 * 9-17";
+	string result = "-5 ** 2 + 4 * 9 - 17";
 	Sub* test = new Sub(add1, op5);
 	EXPECT_EQ(test->stringify(), result);
 }
