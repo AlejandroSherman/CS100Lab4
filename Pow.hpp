@@ -20,7 +20,7 @@ class Pow : public Base
 		}
 		virtual string stringify()
 		{
-			return(lstring + "**" + rstring);
+			return(lstring + " ** " + rstring);
 		}
 	private:
 		string lstring;
